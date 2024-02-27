@@ -83,6 +83,11 @@ header nav{
     border-radius: 10px;
 }
 
+.info-izq{
+    display: flex;
+    justify-content: space-around;
+}
+
 /* hola */
 
 #cuerpo-flor{
@@ -146,4 +151,10 @@ header nav{
     .nav-bootstrap{
         display: none;
     }
+}
+
+
+
+.card{
+    border: 3px solid green;
 }
