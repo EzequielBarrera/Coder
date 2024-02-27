@@ -71,7 +71,7 @@ header nav{
     justify-content: space-between;
 }
 
-.flor-fondo-cont{
+.flor-fondo-cont, .info-izq, .info-der{
     border: 3px solid black;
     padding: 30px;
     border-radius: 20px;
@@ -82,7 +82,6 @@ header nav{
 .flor-fondo{
     border-radius: 10px;
 }
-
 
 /* hola */
 
