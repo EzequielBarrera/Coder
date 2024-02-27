@@ -105,3 +105,45 @@ header nav{
     height: 800px;
     border-radius: 15px;
 }
+
+/* QUERIES */
+
+@media(max-width: 890px){
+    .cuerpo-index{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .logo{
+        height: auto;
+        width: 60px;
+        border: 5px solid rgb(105, 238, 105);
+        border-radius: 50%;
+        padding: 5px;
+        margin: 15px;
+    }
+
+    .navegador{
+        display: none;
+    }
+
+    .nav-bootstrap{
+        width: 100%;
+    }
+
+    .flor-fondo{
+        height: auto;
+        width: 100%;
+    }
+
+    .flor-foto{
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media(min-width:890px){
+    .nav-bootstrap{
+        display: none;
+    }
+}
