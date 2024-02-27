@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#cabecera{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    background-color: blue;
+}
+
+.navegador{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: brown;
+    width: 70%;
+}
+
+.navegador ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navegador ul li{
+    display: inline-block;
+}
+
+.navegador ul li a{
+    list-style: none;
+    text-decoration: none;
+}
+
+.logo{
+    height: 100px;
+}
