@@ -9,6 +9,13 @@ body{
     background: radial-gradient(circle, rgba(238,174,202,1) 26%, rgba(137,43,226,0.37) 83%);
 }
 
+/* TÍTULOS */
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
 /* HEADER */
 
 #cabecera{
@@ -77,6 +84,7 @@ header nav{
     border-radius: 20px;
     background-color:rgba(158,235,237,0.3);
     margin: 1rem;
+    display: flex;
 }
 
 .flor-fondo{
@@ -88,7 +96,23 @@ header nav{
     justify-content: space-around;
 }
 
-/* hola */
+.info-der-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-style: oblique;
+}
+
+.in-der-foto{
+    height: 250px;
+}
+
+.foto-cont{
+    border: 5px solid green;
+    margin: 25px;
+}
+
+/* Flor Gratis */
 
 #cuerpo-flor{
     display: flex;
@@ -104,6 +128,7 @@ header nav{
     border: 3px solid black;
     padding: 30px;
     border-radius: 30px;
+    background-color: rgba(158,235,237,0.3) ;
 }
 
 .flor-foto{
@@ -153,8 +178,3 @@ header nav{
     }
 }
 
-
-
-.card{
-    border: 3px solid green;
-}
