@@ -4,35 +4,38 @@
     box-sizing: border-box;
 }
 
-#cabecera{
+header nav{
     display: flex;
     justify-content: space-between;
-    margin: 15px;
-    background-color: blue;
-}
-
-.navegador{
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: brown;
-    width: 70%;
-}
-
-.navegador ul{
-    display: flex;
-    justify-content: space-between;
-}
-
-.navegador ul li{
-    display: inline-block;
-}
-
-.navegador ul li a{
-    list-style: none;
-    text-decoration: none;
+    background-color: rgba(137, 43, 226, 0.37);
 }
 
 .logo{
-    height: 100px;
+    height: auto;
+    width: 100px;
+    border: 5px solid rgb(105, 238, 105);
+    border-radius: 50%;
+    padding: 5px;
+    margin: 15px;
+}
+
+.navegador ul li{
+    display: inline;
+    margin: 15px;
+}
+
+.navegador ul li a{
+    text-decoration: none;
+    border: 5px solid black;
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navegador ul li a:hover{
+    background-color: rgba(255, 166, 0, 0.2);
+    color: orange;
+    transition: ease 150ms;
 }
