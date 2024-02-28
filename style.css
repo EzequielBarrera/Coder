@@ -62,7 +62,8 @@ header nav {
 /* MAIN */
 
 #cuerpo {
-    height: 100%;
+    height: auto;
+    width: 100%;
 }
 
 /* FOOTER */
@@ -72,11 +73,11 @@ header nav {
     width: 100%;
 }
 
-/* index */
 
-.cuerpo-index {
-    display: flex;
-    justify-content: space-between;
+/* MAIN */
+
+.cuerpo-index{
+    margin-top: 225px;
 }
 
 .flor-fondo-cont,
@@ -86,34 +87,30 @@ header nav {
     padding: 30px;
     border-radius: 20px;
     background-color: rgba(158, 235, 237, 0.3);
-    margin: 1rem;
-    display: flex;
+    margin: 1rem auto;
+    width: 90%;
 }
 
-.flor-fondo {
-    border-radius: 10px;
+.flor-fondo, .in-der-foto{
+    height: auto;
+    width: 100%;
+    border-radius: 5px;
 }
 
 .info-izq {
-    display: flex;
-    justify-content: space-around;
-}
-
-.info-der-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-style: oblique;
-}
-
-.in-der-foto {
-    height: 250px;
+    display: grid;
+    grid-gap: 15px;
+    justify-content: center;
+    grid-template-rows: repeat(3, 1fr);
+    padding: 1rem;
 }
 
 .foto-cont {
     border: 5px solid green;
     margin: 25px;
 }
+
+
 
 /* Flor Gratis */
 
@@ -137,68 +134,57 @@ header nav {
 .flor-foto {
     height: 800px;
     border-radius: 15px;
+    width: 100%;
 }
 
-/* QUERIES */
+/* QUERY */
 
-@media(max-width: 890px) {
+@media(min-width:768px){
+    .cuerpo-index{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "flor info"
+        "card card" ;
+        margin-top: 150px;
+    }
 
-    /* INDEX-q */
+    .flor-fondo-cont{
+        grid-area: flor;
+        height: fit-content;
+        align-self: center;
+    }
 
+    .info-der{
+        grid-area: info;
+    }
+
+    .info-izq{
+        grid-area: card;
+        display: flex;
+    }
+
+}
+
+@media(max-width:1200px){
+    .navegador{
+        display: none;
+    }
+}
+
+@media(min-width:1200px){
+    .nav-bootstrap{
+        display: none;
+    }
+}
+
+@media(min-width:1200px){
+    .cuerpo-index{
+        margin-top: 20px;
+    }
     
-
-    .cuerpo-index {
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 75%;
-        margin: auto;
-    }
-
-    .info-izq {
-        display: grid;
-        grid-gap: 15px;
-    }
-
-    .info-der-flex{
-        display: grid;
-    }
-
-    .logo {
-        height: auto;
-        width: 60px;
-        border: 5px solid rgb(105, 238, 105);
-        border-radius: 50%;
-        padding: 5px;
-        margin: 15px;
-    }
-
-    .navegador {
-        display: none;
-    }
-
-    .nav-bootstrap {
-        width: 100%;
-        margin-bottom: 125px;
-    }
-
-    .flor-fondo {
-        height: auto;
-        width: 100%;
-    }
-
-    .flor-foto {
-        height: auto;
-        width: 100%;
-    }
-
-    .foto-cont{
-        width: fit-content;
-        margin: auto;
-    }
-}
-
-@media(min-width:890px) {
-    .nav-bootstrap {
-        display: none;
+    .info-izq{
+        display: flex;
+        justify-content: space-around;
     }
 }
