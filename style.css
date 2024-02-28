@@ -1,36 +1,36 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 26%, rgba(137,43,226,0.37) 83%);
+body {
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 26%, rgba(137, 43, 226, 0.37) 83%);
 }
 
 /* TÍTULOS */
 
-h1{
+h1 {
     text-align: center;
     text-decoration: underline;
 }
 
 /* HEADER */
 
-#cabecera{
+#cabecera {
     height: 100%;
     width: auto;
 }
 
-header nav{
+header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgba(137, 43, 226, 0.37);
 }
 
-.logo{
+.logo {
     height: auto;
     width: 100px;
     border: 5px solid rgb(105, 238, 105);
@@ -39,12 +39,12 @@ header nav{
     margin: 15px;
 }
 
-.navegador ul li{
+.navegador ul li {
     display: inline;
     margin: 15px;
 }
 
-.navegador ul li a{
+.navegador ul li a {
     text-decoration: none;
     border: 5px solid black;
     border-radius: 15px;
@@ -53,7 +53,7 @@ header nav{
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.navegador ul li a:hover{
+.navegador ul li a:hover {
     background-color: rgba(255, 166, 0, 0.2);
     color: rgb(255, 38, 0);
     transition: ease 150ms;
@@ -61,90 +61,109 @@ header nav{
 
 /* MAIN */
 
-#cuerpo{
+#cuerpo {
     height: 100%;
 }
 
 /* FOOTER */
 
-#pie{
-    background-color:rgba(108, 26, 185, 0.637);
+#pie {
+    background-color: rgba(108, 26, 185, 0.637);
+    width: 100%;
 }
 
 /* index */
 
-.cuerpo-index{
+.cuerpo-index {
     display: flex;
     justify-content: space-between;
 }
 
-.flor-fondo-cont, .info-izq, .info-der{
+.flor-fondo-cont,
+.info-izq,
+.info-der {
     border: 3px solid black;
     padding: 30px;
     border-radius: 20px;
-    background-color:rgba(158,235,237,0.3);
+    background-color: rgba(158, 235, 237, 0.3);
     margin: 1rem;
     display: flex;
 }
 
-.flor-fondo{
+.flor-fondo {
     border-radius: 10px;
 }
 
-.info-izq{
+.info-izq {
     display: flex;
     justify-content: space-around;
 }
 
-.info-der-flex{
+.info-der-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-style: oblique;
 }
 
-.in-der-foto{
+.in-der-foto {
     height: 250px;
 }
 
-.foto-cont{
+.foto-cont {
     border: 5px solid green;
     margin: 25px;
 }
 
 /* Flor Gratis */
 
-#cuerpo-flor{
+#cuerpo-flor {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 1000px;
 }
 
-.flor{
+.flor {
     display: flex;
     justify-content: center;
     align-items: center;
     border: 3px solid black;
     padding: 30px;
     border-radius: 30px;
-    background-color: rgba(158,235,237,0.3) ;
+    background-color: rgba(158, 235, 237, 0.3);
 }
 
-.flor-foto{
+.flor-foto {
     height: 800px;
     border-radius: 15px;
 }
 
 /* QUERIES */
 
-@media(max-width: 890px){
-    .cuerpo-index{
+@media(max-width: 890px) {
+
+    /* INDEX-q */
+
+    
+
+    .cuerpo-index {
         display: grid;
         grid-template-columns: 1fr;
+        width: 75%;
+        margin: auto;
     }
 
-    .logo{
+    .info-izq {
+        display: grid;
+        grid-gap: 15px;
+    }
+
+    .info-der-flex{
+        display: grid;
+    }
+
+    .logo {
         height: auto;
         width: 60px;
         border: 5px solid rgb(105, 238, 105);
@@ -153,28 +172,33 @@ header nav{
         margin: 15px;
     }
 
-    .navegador{
+    .navegador {
         display: none;
     }
 
-    .nav-bootstrap{
+    .nav-bootstrap {
         width: 100%;
+        margin-bottom: 125px;
     }
 
-    .flor-fondo{
+    .flor-fondo {
         height: auto;
         width: 100%;
     }
 
-    .flor-foto{
+    .flor-foto {
         height: auto;
         width: 100%;
     }
-}
 
-@media(min-width:890px){
-    .nav-bootstrap{
-        display: none;
+    .foto-cont{
+        width: fit-content;
+        margin: auto;
     }
 }
 
+@media(min-width:890px) {
+    .nav-bootstrap {
+        display: none;
+    }
+}
