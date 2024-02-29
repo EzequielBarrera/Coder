@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+body:not(#login) {
     background: rgb(238, 174, 202);
     background: radial-gradient(circle, rgba(238, 174, 202, 1) 26%, rgba(137, 43, 226, 0.37) 83%);
 }
@@ -76,7 +76,7 @@ header nav {
 
 /* MAIN */
 /* index */
-.cuerpo-index{
+.cuerpo-index {
     margin-top: 225px;
 }
 
@@ -91,7 +91,8 @@ header nav {
     width: 90%;
 }
 
-.flor-fondo, .in-der-foto{
+.flor-fondo,
+.in-der-foto {
     height: auto;
     width: 100%;
     border-radius: 5px;
@@ -110,14 +111,39 @@ header nav {
     margin: 25px;
 }
 
-/* login */
 
-#pie-l {
-    background-color: rgba(108, 26, 185, 0.637);
+/* LOGIN */
+
+#cuerpo-login {
+    margin-top: 225px;
+    height: auto;
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+}
+
+.flor-login-cont {
+    border: 5px solid green;
+    margin: 25px;
+    height: auto;
+}
+
+.flor-login {
+    width: 100%;
+    height: auto;
+}
+
+.form-login {
+    border: 5px solid rgba(137, 43, 226, 0.37);
+    margin: 25px;
+    padding: 10px;
+    text-align: center;
+}
+
+.btn-login {
+    border: 5px solid orange;
+    border-radius: 15px;
+    padding: 10px;
+    background: none;
+    background-color: rgba(255, 81, 0, 0.37);
 }
 
 /* Flor Gratis */
@@ -147,83 +173,136 @@ header nav {
 
 /* QUERY */
 /* index-q */
-@media(min-width:768px){
-    .cuerpo-index{
+@media(min-width:768px) {
+    .cuerpo-index {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
-        "flor info"
-        "card card" ;
+            "flor info"
+            "card card";
         margin-top: 150px;
     }
 
-    .flor-fondo-cont{
+    .flor-fondo-cont {
         grid-area: flor;
         height: fit-content;
         align-self: center;
     }
 
-    .info-der{
+    .info-der {
         grid-area: info;
     }
 
-    .info-izq{
+    .info-izq {
         grid-area: card;
         display: flex;
     }
 
 }
 
-@media(max-width:1200px){
-    .navegador{
+@media(max-width:1200px) {
+    .navegador {
         display: none;
     }
 }
 
-@media(min-width:1200px){
-    .nav-bootstrap{
+@media(min-width:1200px) {
+    .nav-bootstrap {
         display: none;
     }
-    
-    .cuerpo-index{
+
+    .cuerpo-index {
         margin-top: 20px;
     }
-    
-    .info-izq{
+
+    .info-izq {
         display: flex;
         justify-content: space-around;
         align-items: center;
     }
 
-    
+
 
 }
 
-@media(min-width:1440px){
-    .info-der-flex{
+@media(min-width:1440px) {
+    .info-der-flex {
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    .cuerpo-index{
-        grid-template-areas: 
-        "flor info"
-        "flor card";
+    .cuerpo-index {
+        grid-template-areas:
+            "flor info"
+            "flor card";
     }
 
-    .info-izq{
+    .info-izq {
         display: flex;
         justify-content: space-around;
         align-items: center;
     }
 
-    .flor-fondo{
+    .flor-fondo {
         height: 100vh;
         width: auto;
     }
 
-    .flor-fondo-cont{
+    .flor-fondo-cont {
         width: fit-content;
+    }
+}
+
+/* login-q */
+
+@media(min-width:768px) {
+    #cuerpo-login{
+        margin-top: 127px;
+    }
+
+    .cuerpo-login{
+        display: flex;
+    }
+
+}
+
+@media(min-width:1024px){
+    
+    .form-login{
+        background-color: rgb(105, 238, 105, 0.6);
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .btn-login:hover{
+        color: orange;
+        background-color:rgba(137, 43, 226, 0.37) ;
+        border:5px solid rgb(39, 31, 31);
+    }
+
+    .cuerpo-login{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media(min-width:1440px){
+    #cuerpo-login{
+        margin: 10px;
+    }
+
+    .form-login{
+        padding: 100px;
+        border-radius: 15px;
+    }
+
+    .cuerpo-login{
+        display: flex;
+        justify-content: space-around;
+        
     }
 }
